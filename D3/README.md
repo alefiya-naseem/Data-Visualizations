@@ -1,0 +1,1302 @@
+# DataVizHw3
+
+Data Visualization Homework 3
+
+## Overview
+In this homework assignment, you are a data scientist working for the U.S. federal government. Due to budget cuts for education, your office has been tasked with cutting federal funding to some number of school districts. Your supervisor has asked you to develop a recommendation and objective justification for their decision using data analysis.
+
+Due to related budget cuts, the most recent fiscal data you have to work with is from 2015-16. Download the 2015-16 district-level fiscal data from the National Center for Education Statistics' Common Core of Data:
+* [National Center for education Statistics' Common Core of Data](https://nces.ed.gov/ccd/f33agency.asp)
+
+For helping you make your decision, it may be helpful to have some performance metrics for each district. You can download the 2015-16 data for distrct-level statistics on graduation rate and state assessments on mathematics and reading/language arts from the EDFacts website:
+* [Assessments on Mathematics and Realding/Language Arts Data](https://www2.ed.gov/about/inits/ed/edfacts/data-files/index.html)
+
+These datasets can be linked based on the LEA IDs.
+
+## Problem 1
+
+Import and explore the district-level fiscal data from 2015-16. Rank and visualize the states that take in the most federal funding (revenue).
+
+The table below ranks the states taking most federal funding to states taking least federal funcding.
+ 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STABBR</th>
+      <th>STNAME</th>
+      <th>TFEDREV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>CA</td>
+      <td>California</td>
+      <td>7709275000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TX</td>
+      <td>Texas</td>
+      <td>6194317000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NY</td>
+      <td>New York</td>
+      <td>3374794000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FL</td>
+      <td>Florida</td>
+      <td>3147329000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>IL</td>
+      <td>Illinois</td>
+      <td>2334945000</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>PA</td>
+      <td>Pennsylvania</td>
+      <td>2037315000</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>OH</td>
+      <td>Ohio</td>
+      <td>1837963000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>GA</td>
+      <td>Georgia</td>
+      <td>1815242000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>MI</td>
+      <td>Michigan</td>
+      <td>1731034000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>NC</td>
+      <td>North Carolina</td>
+      <td>1587976000</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>AZ</td>
+      <td>Arizona</td>
+      <td>1302010000</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>NJ</td>
+      <td>New Jersey</td>
+      <td>1249741000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>LA</td>
+      <td>Louisiana</td>
+      <td>1115619000</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>WA</td>
+      <td>Washington</td>
+      <td>1098332000</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>TN</td>
+      <td>Tennessee</td>
+      <td>1096182000</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>VA</td>
+      <td>Virginia</td>
+      <td>1058146000</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>IN</td>
+      <td>Indiana</td>
+      <td>1015476000</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>MO</td>
+      <td>Missouri</td>
+      <td>959978000</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>KY</td>
+      <td>Kentucky</td>
+      <td>880296000</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>SC</td>
+      <td>South Carolina</td>
+      <td>860867000</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>MD</td>
+      <td>Maryland</td>
+      <td>823599000</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>MA</td>
+      <td>Massachusetts</td>
+      <td>804595000</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>AL</td>
+      <td>Alabama</td>
+      <td>803907000</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>WI</td>
+      <td>Wisconsin</td>
+      <td>782647000</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>CO</td>
+      <td>Colorado</td>
+      <td>721719000</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>OK</td>
+      <td>Oklahoma</td>
+      <td>703225000</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>MS</td>
+      <td>Mississippi</td>
+      <td>690724000</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>MN</td>
+      <td>Minnesota</td>
+      <td>685055000</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>AR</td>
+      <td>Arkansas</td>
+      <td>606946000</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>OR</td>
+      <td>Oregon</td>
+      <td>582560000</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>NM</td>
+      <td>New Mexico</td>
+      <td>516289000</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>CT</td>
+      <td>Connecticut</td>
+      <td>484186000</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>IA</td>
+      <td>Iowa</td>
+      <td>464852000</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>KS</td>
+      <td>Kansas</td>
+      <td>453922000</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>UT</td>
+      <td>Utah</td>
+      <td>419642000</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>NV</td>
+      <td>Nevada</td>
+      <td>405789000</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>WV</td>
+      <td>West Virginia</td>
+      <td>360283000</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>NE</td>
+      <td>Nebraska</td>
+      <td>346826000</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>AK</td>
+      <td>Alaska</td>
+      <td>307320000</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>HI</td>
+      <td>Hawaii</td>
+      <td>261131000</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>ID</td>
+      <td>Idaho</td>
+      <td>248546000</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>DC</td>
+      <td>District of Columbia</td>
+      <td>226202000</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>MT</td>
+      <td>Montana</td>
+      <td>220340000</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>SD</td>
+      <td>South Dakota</td>
+      <td>196644000</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>RI</td>
+      <td>Rhode Island</td>
+      <td>188204000</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>ME</td>
+      <td>Maine</td>
+      <td>186523000</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>NH</td>
+      <td>New Hampshire</td>
+      <td>169166000</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>ND</td>
+      <td>North Dakota</td>
+      <td>155453000</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>DE</td>
+      <td>Delaware</td>
+      <td>144707000</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>WY</td>
+      <td>Wyoming</td>
+      <td>123012000</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>VT</td>
+      <td>Vermont</td>
+      <td>111891000</td>
+    </tr>
+  </tbody>
+</table>
+
+The Figure below visualizes the above ranking table on a Chloropleth map of US states. Thus, it shows 2015-2016 Federal Funding by US States.
+
+
+![2015-2016 Federal Funding by US States](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob1fig1.png)
+
+Which states spend the most federal funding per student?
+
+The table below ranks the states spending most federal funding per student to states spending least federal funcding per student.
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STABBR</th>
+      <th>STNAME</th>
+      <th>TOTALEXP</th>
+      <th>V33</th>
+      <th>Expenditure Per Student</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>DC</td>
+      <td>District of Columbia</td>
+      <td>2277771000</td>
+      <td>82955</td>
+      <td>27458.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NY</td>
+      <td>New York</td>
+      <td>68424551000</td>
+      <td>2591962</td>
+      <td>26399.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>VT</td>
+      <td>Vermont</td>
+      <td>2102745000</td>
+      <td>86335</td>
+      <td>24356.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NJ</td>
+      <td>New Jersey</td>
+      <td>30473153000</td>
+      <td>1408148</td>
+      <td>21641.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>WY</td>
+      <td>Wyoming</td>
+      <td>2034229000</td>
+      <td>94511</td>
+      <td>21524.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>CT</td>
+      <td>Connecticut</td>
+      <td>10985762000</td>
+      <td>512463</td>
+      <td>21437.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>AK</td>
+      <td>Alaska</td>
+      <td>2623014000</td>
+      <td>132477</td>
+      <td>19800.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>PA</td>
+      <td>Pennsylvania</td>
+      <td>32733856000</td>
+      <td>1701007</td>
+      <td>19244.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>MA</td>
+      <td>Massachusetts</td>
+      <td>17675778000</td>
+      <td>961325</td>
+      <td>18387.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>ND</td>
+      <td>North Dakota</td>
+      <td>1963630000</td>
+      <td>108322</td>
+      <td>18128.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>RI</td>
+      <td>Rhode Island</td>
+      <td>2537587000</td>
+      <td>141733</td>
+      <td>17904.0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>NH</td>
+      <td>New Hampshire</td>
+      <td>3124778000</td>
+      <td>179652</td>
+      <td>17394.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>DE</td>
+      <td>Delaware</td>
+      <td>2218345000</td>
+      <td>134841</td>
+      <td>16452.0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>IL</td>
+      <td>Illinois</td>
+      <td>33150346000</td>
+      <td>2029799</td>
+      <td>16332.0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>MD</td>
+      <td>Maryland</td>
+      <td>13992191000</td>
+      <td>879196</td>
+      <td>15915.0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>MN</td>
+      <td>Minnesota</td>
+      <td>13532993000</td>
+      <td>861854</td>
+      <td>15702.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>ME</td>
+      <td>Maine</td>
+      <td>2773125000</td>
+      <td>180280</td>
+      <td>15382.0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>HI</td>
+      <td>Hawaii</td>
+      <td>2733094000</td>
+      <td>181995</td>
+      <td>15017.0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>NE</td>
+      <td>Nebraska</td>
+      <td>4640422000</td>
+      <td>315520</td>
+      <td>14707.0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>OH</td>
+      <td>Ohio</td>
+      <td>24521919000</td>
+      <td>1714504</td>
+      <td>14303.0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>WA</td>
+      <td>Washington</td>
+      <td>15260917000</td>
+      <td>1084025</td>
+      <td>14078.0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>CA</td>
+      <td>California</td>
+      <td>85327525000</td>
+      <td>6203495</td>
+      <td>13755.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>WI</td>
+      <td>Wisconsin</td>
+      <td>11788616000</td>
+      <td>857794</td>
+      <td>13743.0</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>IA</td>
+      <td>Iowa</td>
+      <td>6972412000</td>
+      <td>507996</td>
+      <td>13725.0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>MI</td>
+      <td>Michigan</td>
+      <td>19461509000</td>
+      <td>1486088</td>
+      <td>13096.0</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>OR</td>
+      <td>Oregon</td>
+      <td>7501954000</td>
+      <td>574223</td>
+      <td>13065.0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>MT</td>
+      <td>Montana</td>
+      <td>1879789000</td>
+      <td>145149</td>
+      <td>12951.0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>VA</td>
+      <td>Virginia</td>
+      <td>16497520000</td>
+      <td>1283491</td>
+      <td>12854.0</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>LA</td>
+      <td>Louisiana</td>
+      <td>8916129000</td>
+      <td>717223</td>
+      <td>12431.0</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>KS</td>
+      <td>Kansas</td>
+      <td>6134836000</td>
+      <td>495545</td>
+      <td>12380.0</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>SC</td>
+      <td>South Carolina</td>
+      <td>9385221000</td>
+      <td>763011</td>
+      <td>12300.0</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>WV</td>
+      <td>West Virginia</td>
+      <td>3395575000</td>
+      <td>277436</td>
+      <td>12239.0</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>MO</td>
+      <td>Missouri</td>
+      <td>11003685000</td>
+      <td>917389</td>
+      <td>11995.0</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>NM</td>
+      <td>New Mexico</td>
+      <td>3887353000</td>
+      <td>335316</td>
+      <td>11593.0</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>TX</td>
+      <td>Texas</td>
+      <td>61361785000</td>
+      <td>5298905</td>
+      <td>11580.0</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>IN</td>
+      <td>Indiana</td>
+      <td>12001326000</td>
+      <td>1045066</td>
+      <td>11484.0</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>KY</td>
+      <td>Kentucky</td>
+      <td>7786281000</td>
+      <td>686440</td>
+      <td>11343.0</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>AR</td>
+      <td>Arkansas</td>
+      <td>5544520000</td>
+      <td>491603</td>
+      <td>11278.0</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>CO</td>
+      <td>Colorado</td>
+      <td>10020497000</td>
+      <td>895704</td>
+      <td>11187.0</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>GA</td>
+      <td>Georgia</td>
+      <td>19356755000</td>
+      <td>1755985</td>
+      <td>11023.0</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>SD</td>
+      <td>South Dakota</td>
+      <td>1475864000</td>
+      <td>134045</td>
+      <td>11010.0</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>AL</td>
+      <td>Alabama</td>
+      <td>7864636000</td>
+      <td>743789</td>
+      <td>10574.0</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>FL</td>
+      <td>Florida</td>
+      <td>27945116000</td>
+      <td>2776933</td>
+      <td>10063.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>NV</td>
+      <td>Nevada</td>
+      <td>4605250000</td>
+      <td>467527</td>
+      <td>9850.0</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>TN</td>
+      <td>Tennessee</td>
+      <td>9680512000</td>
+      <td>999260</td>
+      <td>9688.0</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>NC</td>
+      <td>North Carolina</td>
+      <td>14911649000</td>
+      <td>1544766</td>
+      <td>9653.0</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>MS</td>
+      <td>Mississippi</td>
+      <td>4631356000</td>
+      <td>486245</td>
+      <td>9525.0</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>OK</td>
+      <td>Oklahoma</td>
+      <td>6315294000</td>
+      <td>692658</td>
+      <td>9117.0</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>AZ</td>
+      <td>Arizona</td>
+      <td>9482835000</td>
+      <td>1096909</td>
+      <td>8645.0</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>UT</td>
+      <td>Utah</td>
+      <td>5379027000</td>
+      <td>647599</td>
+      <td>8306.0</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>ID</td>
+      <td>Idaho</td>
+      <td>2212651000</td>
+      <td>292082</td>
+      <td>7575.0</td>
+    </tr>
+  </tbody>
+</table>
+
+The Figure below visualizes the above ranking table on a Chloropleth map of US states. Thus, it shows 2015-2016 Federal Funding Expenditure per student by US States.
+
+![2015-2016 Federal Funding Expenditure per student by State](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob1fig2.png)
+
+## Problem 2
+
+Visualize the relationship between school districts' total revenue and expenditures. 
+
+The Plot below shows the relationship between school districts' Total Revenue and Total Expenditures.
+ 
+![Relationship between Total Expenditures and Total and Revenue](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob2fig1.png)
+
+Which states have the most debt per student
+
+The table below ranks the states having most debt per student to states having least debt per student.
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STABBR</th>
+      <th>STNAME</th>
+      <th>V33</th>
+      <th>_41F</th>
+      <th>_66V</th>
+      <th>Debt per student</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>SC</td>
+      <td>South Carolina</td>
+      <td>763533</td>
+      <td>14020645996</td>
+      <td>-4</td>
+      <td>18362.855295</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MN</td>
+      <td>Minnesota</td>
+      <td>862222</td>
+      <td>13221642998</td>
+      <td>31945998</td>
+      <td>15371.434498</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TX</td>
+      <td>Texas</td>
+      <td>5301477</td>
+      <td>74995427994</td>
+      <td>3615352994</td>
+      <td>14828.090547</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PA</td>
+      <td>Pennsylvania</td>
+      <td>1703736</td>
+      <td>24188423982</td>
+      <td>33960982</td>
+      <td>14217.217318</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>MI</td>
+      <td>Michigan</td>
+      <td>1487417</td>
+      <td>17618576994</td>
+      <td>654178994</td>
+      <td>12284.891182</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>OR</td>
+      <td>Oregon</td>
+      <td>576369</td>
+      <td>6806047992</td>
+      <td>-8</td>
+      <td>11808.490713</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>KS</td>
+      <td>Kansas</td>
+      <td>495884</td>
+      <td>5559778990</td>
+      <td>9311990</td>
+      <td>11230.632527</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NY</td>
+      <td>New York</td>
+      <td>2711677</td>
+      <td>27737167732</td>
+      <td>2028137732</td>
+      <td>10976.714949</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>WA</td>
+      <td>Washington</td>
+      <td>1086380</td>
+      <td>11397987984</td>
+      <td>-16</td>
+      <td>10491.713736</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>AK</td>
+      <td>Alaska</td>
+      <td>132477</td>
+      <td>1372527000</td>
+      <td>0</td>
+      <td>10360.492765</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>IL</td>
+      <td>Illinois</td>
+      <td>2035008</td>
+      <td>19914250986</td>
+      <td>919355986</td>
+      <td>10237.604458</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>CA</td>
+      <td>California</td>
+      <td>6211501</td>
+      <td>62998146976</td>
+      <td>-24</td>
+      <td>10142.177704</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>IN</td>
+      <td>Indiana</td>
+      <td>1046567</td>
+      <td>10332062991</td>
+      <td>198685991</td>
+      <td>10062.183293</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>NE</td>
+      <td>Nebraska</td>
+      <td>316014</td>
+      <td>2757995990</td>
+      <td>-10</td>
+      <td>8727.448721</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>AR</td>
+      <td>Arkansas</td>
+      <td>492132</td>
+      <td>4263469994</td>
+      <td>84994</td>
+      <td>8663.437834</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>KY</td>
+      <td>Kentucky</td>
+      <td>686598</td>
+      <td>5865333996</td>
+      <td>-4</td>
+      <td>8542.602792</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>NV</td>
+      <td>Nevada</td>
+      <td>467527</td>
+      <td>3800617000</td>
+      <td>14516000</td>
+      <td>8160.241013</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>DC</td>
+      <td>District of Columbia</td>
+      <td>83404</td>
+      <td>666800999</td>
+      <td>9570999</td>
+      <td>8109.587046</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>AL</td>
+      <td>Alabama</td>
+      <td>743789</td>
+      <td>5980387000</td>
+      <td>0</td>
+      <td>8040.434855</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>CO</td>
+      <td>Colorado</td>
+      <td>895956</td>
+      <td>7158934998</td>
+      <td>-2</td>
+      <td>7990.275188</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>MO</td>
+      <td>Missouri</td>
+      <td>919135</td>
+      <td>7133752990</td>
+      <td>-10</td>
+      <td>7761.376707</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>IA</td>
+      <td>Iowa</td>
+      <td>508014</td>
+      <td>3766634000</td>
+      <td>300000</td>
+      <td>7415.020059</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>OH</td>
+      <td>Ohio</td>
+      <td>1716585</td>
+      <td>12221156990</td>
+      <td>109386990</td>
+      <td>7183.182878</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>SD</td>
+      <td>South Dakota</td>
+      <td>134061</td>
+      <td>926821998</td>
+      <td>-2</td>
+      <td>6913.434899</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>ND</td>
+      <td>North Dakota</td>
+      <td>108630</td>
+      <td>728335996</td>
+      <td>6027996</td>
+      <td>6760.231906</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>VA</td>
+      <td>Virginia</td>
+      <td>1283590</td>
+      <td>8322239998</td>
+      <td>2175998</td>
+      <td>6485.260867</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>NM</td>
+      <td>New Mexico</td>
+      <td>335694</td>
+      <td>2170659988</td>
+      <td>-12</td>
+      <td>6466.186396</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>RI</td>
+      <td>Rhode Island</td>
+      <td>141810</td>
+      <td>904742998</td>
+      <td>-2</td>
+      <td>6379.966124</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>WI</td>
+      <td>Wisconsin</td>
+      <td>867800</td>
+      <td>4989846974</td>
+      <td>327204974</td>
+      <td>6127.047647</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>TN</td>
+      <td>Tennessee</td>
+      <td>1000169</td>
+      <td>5812778996</td>
+      <td>-4</td>
+      <td>5811.796798</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>MT</td>
+      <td>Montana</td>
+      <td>145287</td>
+      <td>831509996</td>
+      <td>-4</td>
+      <td>5723.223633</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>LA</td>
+      <td>Louisiana</td>
+      <td>718711</td>
+      <td>4042268991</td>
+      <td>-9</td>
+      <td>5624.331591</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>MA</td>
+      <td>Massachusetts</td>
+      <td>964026</td>
+      <td>5340393991</td>
+      <td>28715991</td>
+      <td>5569.465950</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>FL</td>
+      <td>Florida</td>
+      <td>2792234</td>
+      <td>14654280991</td>
+      <td>-9</td>
+      <td>5248.228115</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>MD</td>
+      <td>Maryland</td>
+      <td>879601</td>
+      <td>4430270998</td>
+      <td>-2</td>
+      <td>5036.682537</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>ME</td>
+      <td>Maine</td>
+      <td>180479</td>
+      <td>901950994</td>
+      <td>-6</td>
+      <td>4997.539813</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>ID</td>
+      <td>Idaho</td>
+      <td>292159</td>
+      <td>1441111998</td>
+      <td>466998</td>
+      <td>4934.227582</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>NJ</td>
+      <td>New Jersey</td>
+      <td>1408220</td>
+      <td>6897055998</td>
+      <td>37302998</td>
+      <td>4924.201471</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>NH</td>
+      <td>New Hampshire</td>
+      <td>179682</td>
+      <td>882609000</td>
+      <td>0</td>
+      <td>4912.061308</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>UT</td>
+      <td>Utah</td>
+      <td>647870</td>
+      <td>3154375998</td>
+      <td>-2</td>
+      <td>4868.840965</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>NC</td>
+      <td>North Carolina</td>
+      <td>1544934</td>
+      <td>7507373998</td>
+      <td>-2</td>
+      <td>4859.349329</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>CT</td>
+      <td>Connecticut</td>
+      <td>523737</td>
+      <td>2419284992</td>
+      <td>56302992</td>
+      <td>4726.776959</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>DE</td>
+      <td>Delaware</td>
+      <td>134847</td>
+      <td>625544000</td>
+      <td>0</td>
+      <td>4638.916698</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>AZ</td>
+      <td>Arizona</td>
+      <td>1097702</td>
+      <td>4918178987</td>
+      <td>118232987</td>
+      <td>4588.141384</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>MS</td>
+      <td>Mississippi</td>
+      <td>487166</td>
+      <td>1623574980</td>
+      <td>1915980</td>
+      <td>3336.626448</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>OK</td>
+      <td>Oklahoma</td>
+      <td>692878</td>
+      <td>2180327996</td>
+      <td>-4</td>
+      <td>3146.770416</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>VT</td>
+      <td>Vermont</td>
+      <td>86518</td>
+      <td>252911998</td>
+      <td>2745998</td>
+      <td>2954.968862</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>GA</td>
+      <td>Georgia</td>
+      <td>1757071</td>
+      <td>4497633988</td>
+      <td>44363988</td>
+      <td>2584.982608</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>WV</td>
+      <td>West Virginia</td>
+      <td>277452</td>
+      <td>345800000</td>
+      <td>0</td>
+      <td>1246.341710</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>WY</td>
+      <td>Wyoming</td>
+      <td>94717</td>
+      <td>62809998</td>
+      <td>-2</td>
+      <td>663.133292</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>HI</td>
+      <td>Hawaii</td>
+      <td>181995</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+
+The Figure below visualizes the above ranking table on a Chloropleth map of US states. Thus, it shows 2015-2016 Debt in USD per student by US States.
+
+![2015-2016 Debt in USD per student by State](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob2fig2.png)
+
+## Problem 3
+
+The district-level performance metrics from EDFacts may be useful in your decision. However, to protect student privacy, the data in these datasets has been heavily "blurred" to prevent students from being identified. Therefore, most of the numeric metrics are presented as ranges in string format. In addition, censored and missing data must be imputed. Write and explain a function for processing a single column of ¿blurred¿ metrics into usable numeric values. Use it to process and then visualize the distribution of a performance metric of your choice.
+
+##### Performance metric of choice: `ALL_MTH00PCTPROF_1516`
+This metric gives the percentage of all students scoring at or above proficiency in the Math assessment across all grades in SY 2015-2016.
+
+We use the function to process a single column of "blurred" metrics into usable numeric values.If a data point in the columns (starts with LE  or LT) is less than or less than or equal to, then we subtract 3 from it's numeric value attached to it. If a data point (starts with GE or GT) is greater than or greater than or equal to, then we add 4 points to the numeric value attached to it. Any data point containing a hyphen will be the average of the two numeric values in the data point which is separated by hyphen. Else, we keep the data point as it is.
+
+The Plot below shows the Distribution of Math Proficiency across all School Districts.
+
+![2015-2016 Distribution of Math proficiency across all School Districts](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob3fig1.png)
+
+## Problem 4
+
+You are tasked with cutting 15% of the U.S. federal budget currently being spent on funding school districts. How much money is this? Choose which school districts will have their funding cut and how this will be done.
+(You should produce a table of LEA IDs and the dollar amount by which their federal funding will be cut-you do not need print the entire table.)
+
+##### * Total US Federal Budget: 55602742000
+##### * 15% of US Budget: 8340411300.0
+
+The school districts that have their funding cut and the amount of cut can be viewed here under problem 4:
+
+[Problem 4 Federal Funding Deductions for Schoool Districts](https://github.com/alefiya-naseem/DataVizHw3/blob/master/DataVizHw3.ipynb)
+
+We do a sanity check to see if the deductions made across school districts is equal to 15% upto 2 significant digits:
+
+##### * My estimated deduction: 8340411291.0
+##### * Actual 15% deduction: 8340411300
+
+## Problem 5
+
+Provide a statement for your supervisor justifying your decisions on which school districts will lose funding.
+
+I think it would be unfair to deduct 15% across all school districts irrespective of revenue and expense. This would make school districts that are already struggling to operate harder to function. So I first filter out those school districts where expenditure - revenue is negative which means these schools are earning more than they're spending. Then the deduction is made proportional to their debt amount. So school districts that earn significantly more than they spend get a larger funding cut than those with lower revenue to expense differences.
