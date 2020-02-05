@@ -11,7 +11,7 @@ I scored 31%. Surprised by my general misconception that things are getting wors
 
 In the last 20 years the proportion of people living in extreme poverty worldwide, has...?
 
-![](https://github.com/alefiya-naseem/DataVizHw1/blob/master/prob1_hw1.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/1-Gapminder-Analysis/images/prob1_hw1.png)
 
 After grouping 161 countries into 6 regions they belong to, we can see that almost all of them have seen their extreme poverty rate has almost halved. This could be due to the increase in industrialization across the globe after 1950's.
 
@@ -19,7 +19,7 @@ After grouping 161 countries into 6 regions they belong to, we can see that almo
 
 #### Visualize the distribution of income (GDP / capita) across countries and continents, and how the distribution of income changes over time.
 
-![](https://github.com/alefiya-naseem/DataVizHw1/blob/master/animated_prob2.gif)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/1-Gapminder-Analysis/images/animated_prob2.gif)
 
 #### Interpret the visualization and what you notice. Are they any notable trends and/or deviations from that trend? What caveats apply to your conclusions?
 
@@ -29,7 +29,7 @@ The GDP has constantly gone up for all countries, thus also the continents. We c
 
 #### Use visualization to investigate the relationship between income (GDP / capita), life expectancy, and child mortality over time. How does each measure change over time within each continent?
 
-![](https://github.com/alefiya-naseem/DataVizHw1/blob/master/animated_prob3.gif)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/1-Gapminder-Analysis/images/animated_prob3.gif)
 
 #### Interpret your visualizations, noting any trends and/or outliers.
 
@@ -41,7 +41,7 @@ Life Expectancy remained almost stagnant for 100 years. We see a positive correl
 
 I wanted to see how malnourishment and child deaths of children under 5 years has been trending with an increase in gdp and income over the years. For this purpose I have used the icome per person dataset, malnutrition percent of children under 5 years and total population of children under 5 years and the geographic data to distribute it.
 
-![](https://github.com/alefiya-naseem/DataVizHw1/blob/master/prob4_hw1.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/1-Gapminder-Analysis/images/prob4_hw1.png)
 
 [Click here to view the visualization in play in notebook](https://github.com/alefiya-naseem/DataVizHw1/blob/master/DataViz-gapminder.ipynb)
 
