@@ -1,4 +1,5 @@
-# DataVizHw4
+#
+DataVizHw4
 
 Data Visualization Homework 4
 
@@ -25,7 +26,7 @@ For the districts you selected for budget cuts in HW 3 Problem 4, calculate and 
 The plot below shows the proportion of each district's total funding that is lost.
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of each district’s total funding that will be lost" src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/budget_cut_proportion.png">
+	<img width="560" height="420" alt="Proportion of each district’s total funding that will be lost" src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/budget_cut_proportion.png">
 </p>
 
 The top 10 districts which are affected the most by the budget cuts are:
@@ -134,31 +135,31 @@ Calculate the proportion of enrolled students by race for each district, then vi
 Comment on whether the distributions appear to be the same or different. Did your selection include any hidden biases, or manage to avoid them?
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of American Indian/Alaska Native enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/proportion_cut_AM.png">
+	<img width="560" height="420" alt="Proportion of American Indian/Alaska Native enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/proportion_cut_AM.png">
 </p>
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of Asian enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/proportion_cut_AS.png">
+	<img width="560" height="420" alt="Proportion of Asian enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/proportion_cut_AS.png">
 </p>
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of Hispanic enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/proportion_cut_HI.png">
+	<img width="560" height="420" alt="Proportion of Hispanic enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/proportion_cut_HI.png">
 </p>
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of Black enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/proportion_cut_BL.png">
+	<img width="560" height="420" alt="Proportion of Black enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/proportion_cut_BL.png">">
 </p>
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of White enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/proportion_cut_WH.png">
+	<img width="560" height="420" alt="Proportion of White enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/proportion_cut_WH.png">
 </p>
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of Hawaiian Native/Pacific Islander enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/proportion_cut_HP.png">
+	<img width="560" height="420" alt="Proportion of Hawaiian Native/Pacific Islander enrolled students across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/proportion_cut_HP.png">
 </p>
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of Two or More Races enrolled students across districts that received budget cuts versus districts that did not receive budget cuts" src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/proportion_cut_TR.png">
+	<img width="560" height="420" alt="Proportion of Two or More Races enrolled students across districts that received budget cuts versus districts that did not receive budget cuts" src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/proportion_cut_TR.png">
 </p>
 
 From the above plots we can see that there isn't alot of difference between districts that might face budget cuts versus those that will not. The paired violin plots do not show a lot of difference in their proportions for eachof the identified ethnicities. The only distinction we can see between them is of the outliers. Thus, it seems like the method used here, for selection of which schools will face a budget cut manages to avoid any hidden biases.
@@ -170,11 +171,11 @@ Calculate the proportion of enrolled students by disability status (students wit
 Comment on whether the distributions appear to be the same or different. Did your selection include any hidden biases, or manage to avoid them?
 
 <p align="center">
-	<img width="560" height="420" alt="Proportion of enrolled students by disability status across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/proportion_cut_disability%20status%20students.png">
+	<img width="560" height="420" alt="Proportion of enrolled students by disability status across districts that received budget cuts versus districts that did not receive budget cuts." src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/proportion_cut_disability%20status%20students.png">
 </p>
 
 <p align="center">
-        <img width="560" height="420" alt="Proportion of each district’s enrolled students by disability status" src="https://github.com/alefiya-naseem/DataVizHw4/blob/master/images/budget_cut_proportion_disability_students.png">
+        <img width="560" height="420" alt="Proportion of each district’s enrolled students by disability status" src="https://github.com/alefiya-naseem/Data-Visualizations/blob/master/4-NCES-Funding-Cut-Analysis/images/budget_cut_proportion_disability_students.png">
 </p>
 
 From the above plots it can be observed that the distribution of students with disability status for districts with and withput funding cut are more or less similar. We can see a higher proportion of students clustered near the top end of the "No budget cut" group and lower proportion for students with "budget cut" though this difference is very small. We can also see from the above histogram that the number of students on IEP is highly skewed on one side and hence, one cannot ocnfidently say if the method slected for funcding cut avoids any hidden biases or no.
