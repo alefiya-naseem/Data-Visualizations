@@ -1,4 +1,5 @@
-# DataVizHw2
+# 
+DataVizHw2
 
 Data Visualization Homework 2
 
@@ -39,10 +40,10 @@ Althought, I liked how the user has made the breakdown of period into 3 parts: b
 
 Choose and fit one or more models to quantify the relationship betweem income (GDP per capita) and life expectancy over time. Justify your choice of model and comment on its appropriateness. (You are not required to handle the autocorrelation of time series, but should comment on how this impacts your analysis.) Visualize the model(s) and comment on what they tell you about the relationship between income and life expectancy over time.
 
-![](https://github.com/alefiya-naseem/DataVizHw2/blob/master/images/hw2_prob4_image1.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/2-Gapminder-GDP/images/hw2_prob4_image1.png)
 *GDP/capita over time across world regions*
 
-![](https://github.com/alefiya-naseem/DataVizHw2/blob/master/images/hw2_prob4_image2.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/2-Gapminder-GDP/images/hw2_prob4_image2.png)
 *Life expectancy over time across world regions*
 
 Life expectancy – which measures the average age of death of a population – is one of the key measures of a population’s health.
@@ -60,12 +61,12 @@ The world developed from equally poor health in 1800 to great inequality in 1950
 
 There's a clear linear relationship just by observing the data. So we'll first plot a linear regression to check fit (even though this seems naive as theres a temporal correlation here too). Let's treat this as a baseline. This is the result we get:
 
-![](https://github.com/alefiya-naseem/DataVizHw2/blob/master/images/hw2_prob4_image3.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/2-Gapminder-GDP/images/hw2_prob4_image3.png)
 *Predicted GDP versus True GDP*
 
 We then fit a model using an algorithm that takes into account the temporal relationship. This is the result we get:
 
-![](https://github.com/alefiya-naseem/DataVizHw2/blob/master/images/hw2_prob4_image4.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/2-Gapminder-GDP/images/hw2_prob4_image4.png)
 *Predicted GDP versus True GDP*
 
 ##### What affects improvements in in life expectancy?
@@ -78,20 +79,20 @@ Scientific understanding and technological progress makes some very efficient pu
 
 Choose and fit one or more models to quantify the relationship betweem income (GDP per capita) and child mortality over time. Justify your choice of model and comment on its appropriateness. (You are not required to handle the autocorrelation of time series, but should comment on how this impacts your analysis.) Visualize the model(s) and comment on what they tell you about the relationship between income and child mortality over time.
 
-![](https://github.com/alefiya-naseem/DataVizHw2/blob/master/images/hw2_prob5_image1.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/2-Gapminder-GDP/images/hw2_prob5_image1.png)
 *GDP/capita over time across world regions*
 
-![](https://github.com/alefiya-naseem/DataVizHw2/blob/master/images/hw2_prob5_image2.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/2-Gapminder-GDP/images/hw2_prob5_image2.png)
 *Child mortality over time across world regions*
 
 There's a clear linear relationship just by observing the data. So we'll first plot a linear regression to check fit (even though this seems naive as theres a temporal correlation here too). Let's treat this as a baseline. This is the result we get:
 
-![](https://github.com/alefiya-naseem/DataVizHw2/blob/master/images/hw2_prob5_image3.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/2-Gapminder-GDP/images/hw2_prob5_image3.png)
 *Predicted GDP versus True GDP*
 
 We then fit a model using an algorithm that takes into account the temporal relationship. This is the result we get:
 
-![](https://github.com/alefiya-naseem/DataVizHw2/blob/master/images/hw2_prob5_image4.png)
+![](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/2-Gapminder-GDP/images/hw2_prob5_image4.png)
 *Predicted GDP versus True GDP*
 
 Before the Modern Revolution child mortality was very high in all societies that we have knowledge of – a quarter of all children died in the first year of life, almost half died before reaching the end of puberty. Whether in Ancient Rome; Ancient Greece; the pre-Columbian Americas; Medieval Japan or Medieval England; the European Renaissance; or Imperial China: Every fourth newborn died in the first year of life. One out of two died in childhood.
