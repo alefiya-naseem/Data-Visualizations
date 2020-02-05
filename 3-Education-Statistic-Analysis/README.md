@@ -1,4 +1,5 @@
-# DataVizHw3
+#
+iDataVizHw3
 
 Data Visualization Homework 3
 
@@ -341,7 +342,7 @@ The table below ranks the states taking most federal funding to states taking le
 The Figure below visualizes the above ranking table on a Chloropleth map of US states. Thus, it shows 2015-2016 Federal Funding by US States.
 
 
-![2015-2016 Federal Funding by US States](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob1fig1.png)
+![2015-2016 Federal Funding by US States](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/3-Education-Statistic-Analysis/images/hw3prob1fig1.png)
 
 Which states spend the most federal funding per student?
 
@@ -772,7 +773,7 @@ The table below ranks the states spending most federal funding per student to st
 
 The Figure below visualizes the above ranking table on a Chloropleth map of US states. Thus, it shows 2015-2016 Federal Funding Expenditure per student by US States.
 
-![2015-2016 Federal Funding Expenditure per student by State](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob1fig2.png)
+![2015-2016 Federal Funding Expenditure per student by State](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/3-Education-Statistic-Analysis/images/hw3prob1fig2.png)
 
 ## Problem 2
 
@@ -780,7 +781,7 @@ Visualize the relationship between school districts' total revenue and expenditu
 
 The Plot below shows the relationship between school districts' Total Revenue and Total Expenditures.
  
-![Relationship between Total Expenditures and Total and Revenue](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob2fig1.png)
+![Relationship between Total Expenditures and Total and Revenue](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/3-Education-Statistic-Analysis/images/hw3prob2fig1.png)
 
 Which states have the most debt per student
 
@@ -1263,7 +1264,7 @@ The table below ranks the states having most debt per student to states having l
 
 The Figure below visualizes the above ranking table on a Chloropleth map of US states. Thus, it shows 2015-2016 Debt in USD per student by US States.
 
-![2015-2016 Debt in USD per student by State](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob2fig2.png)
+![2015-2016 Debt in USD per student by State](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/3-Education-Statistic-Analysis/images/hw3prob2fig2.png)
 
 ## Problem 3
 
@@ -1276,7 +1277,7 @@ We use the function to process a single column of "blurred" metrics into usable 
 
 The Plot below shows the Distribution of Math Proficiency across all School Districts.
 
-![2015-2016 Distribution of Math proficiency across all School Districts](https://github.com/alefiya-naseem/DataVizHw3/blob/master/images/hw3prob3fig1.png)
+![2015-2016 Distribution of Math proficiency across all School Districts](https://github.com/alefiya-naseem/Data-Visualizations/blob/master/3-Education-Statistic-Analysis/images/hw3prob3fig1.png)
 
 ## Problem 4
 
